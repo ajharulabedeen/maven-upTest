@@ -20,14 +20,14 @@
       <file leaf-file-name="AppController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/xyz/neomtech/javafxbasic/AppController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="125" column="31" lean-forward="true" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
+            <state relative-caret-position="215">
+              <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#showAlert#0;class#AppController#0" />
-                <element signature="e#4147#4148#0" expanded="true" />
-                <element signature="e#4207#4208#0" expanded="true" />
-                <marker date="1616007077914" expanded="true" signature="1635:2152" ph="..." />
+                <element signature="e#4534#4535#0" expanded="true" />
+                <element signature="e#4594#4595#0" expanded="true" />
+                <marker date="1616009789862" expanded="true" signature="1635:2152" ph="..." />
               </folding>
             </state>
           </provider>
@@ -465,7 +465,7 @@
       <workItem from="1612778569198" duration="738000" />
       <workItem from="1615992438905" duration="1543000" />
       <workItem from="1615994363333" duration="40000" />
-      <workItem from="1615994422742" duration="9295000" />
+      <workItem from="1615994422742" duration="10404000" />
     </task>
     <servers />
   </component>
@@ -502,7 +502,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90476000" />
+    <option name="totallyTimeSpent" value="91585000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,6 +515,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="RestServices" order="3" />
@@ -534,7 +535,7 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.77259886" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.55225986" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32909605" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.40960452" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24563758" />
@@ -891,14 +892,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/xyz/neomtech/javafxbasic/AppController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="125" column="31" lean-forward="true" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
+        <state relative-caret-position="215">
+          <caret line="125" column="9" selection-start-line="125" selection-start-column="9" selection-end-line="125" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#showAlert#0;class#AppController#0" />
-            <element signature="e#4147#4148#0" expanded="true" />
-            <element signature="e#4207#4208#0" expanded="true" />
-            <marker date="1616007077914" expanded="true" signature="1635:2152" ph="..." />
+            <element signature="e#4534#4535#0" expanded="true" />
+            <element signature="e#4594#4595#0" expanded="true" />
+            <marker date="1616009789862" expanded="true" signature="1635:2152" ph="..." />
           </folding>
         </state>
       </provider>

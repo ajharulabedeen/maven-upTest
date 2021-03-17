@@ -85,11 +85,11 @@ public class AppController implements Initializable {
         print("Fetching %s...", baseUrl);
         for (int i = 1; i <= 30; i++) {
             String url = "https://app.memrise.com/course/421128/essential-words-for-the-ielts-3/" + i + "/";
-            System.out.println(i);
+            System.out.println(i + "---------------------------------");
             for (int x = 0; x < 19; x++) {
-                System.out.println(x);
-                getWords(url);
+//                System.out.println(x);
             }
+            getWords(url);
         }
     }
 
@@ -119,7 +119,7 @@ public class AppController implements Initializable {
 //            2nd meaning of the word.
             String x = "";
             for (int i = 1; i < ss.length; i++) {
-                System.out.print(ss[i] + " ");
+//                System.out.print(ss[i] + " ");
                 x += ss[i] + " ";
             }
             dataGrid.setBusinessAddress(x);
