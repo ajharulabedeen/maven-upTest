@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="886.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xyz.neomtech.javafxbasic.AppController">
+   <children>
+      <Button layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#submitButtonAction" prefHeight="26.0" prefWidth="113.0" text="Search" />
+      <TextField id="searchText" fx:id="searchText" layoutX="158.0" layoutY="14.0" prefHeight="26.0" prefWidth="704.0" />
+      <TableView fx:id="dataGrid" layoutX="23.0" layoutY="80.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="50.0">
+        <columns>
+          <TableColumn fx:id="index" prefWidth="75.0" text="index" />
+          <TableColumn fx:id="columnBusinessName" prefWidth="148.80001831054688" text="Business Name" />
+            <TableColumn fx:id="columnBusinessAddress" prefWidth="148.80001831054688" text="Business Address" />
+            <TableColumn fx:id="columnCity" minWidth="1.600006103515625" prefWidth="127.20001220703125" text="City" />
+            <TableColumn fx:id="columnState" prefWidth="108.79998779296875" text="State" />
+            <TableColumn fx:id="columnZipcode" prefWidth="205.59991455078125" text="Zip Code" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
