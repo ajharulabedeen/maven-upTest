@@ -11,9 +11,22 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import org.jsoup.Jsoup;
 import xyz.neomtech.javafxbasic.model.DataGrid;
 
+import org.jsoup.helper.Validate;
 
+import java.io.IOException;
+import java.util.List;
+
+import org.jsoup.Jsoup;
+import org.jsoup.helper.Validate;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.Date;
 import java.util.ResourceBundle;
@@ -43,6 +56,8 @@ public class AppController implements Initializable {
 
     ObservableList<DataGrid> dataLists = FXCollections.observableArrayList();
 
+    int count = 0;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         index.setCellValueFactory(new PropertyValueFactory<DataGrid, Integer>("index")); //1
@@ -55,7 +70,7 @@ public class AppController implements Initializable {
     }
 
     @FXML
-    private void submitButtonAction() {
+    private void submitButtonAction() throws IOException {
         System.out.println("Alhudulilah Submit Button is Working!");
         if (searchText.getText().isEmpty()) {
             showAlert();
@@ -64,8 +79,18 @@ public class AppController implements Initializable {
         }
     }
 
-    private void startJsoupSearch() {
+    private void startJsoupSearch() throws IOException {
         System.out.println("jSOUP Saerch Working!");
+        String baseUrl = "https://app.memrise.com/course/421128/essential-words-for-the-ielts-3/";
+        print("Fetching %s...", baseUrl);
+        for (int i = 1; i <= 30; i++) {
+            String url = "https://app.memrise.com/course/421128/essential-words-for-the-ielts-3/" + i + "/";
+            System.out.println(i);
+            for (int x = 0; x < 19; x++) {
+                System.out.println(x);
+                getWords(url);
+            }
+        }
     }
 
     private void showAlert() {
@@ -76,5 +101,34 @@ public class AppController implements Initializable {
         alert.showAndWait();
     }
 
+    private void getWords(String url) throws IOException {
+        Document doc = Jsoup.connect(url).get();
+//        no need the words heards, if words header requied then have to active this line.
+//        Elements header = doc.select("div.infos");
+//        System.out.println(header.text());
 
+        Elements words = doc.select("div.thing");
+        List<String> list = words.eachText();
+        words.eachText().forEach(s -> {
+            String[] ss = s.split(" ");
+//            1st print the word,
+            System.out.print(ss[0] + ", ");
+            DataGrid dataGrid = new DataGrid();
+            dataGrid.setIndex(count++);
+            dataGrid.setBusinessName(ss[0]);
+//            2nd meaning of the word.
+            String x = "";
+            for (int i = 1; i < ss.length; i++) {
+                System.out.print(ss[i] + " ");
+                x += ss[i] + " ";
+            }
+            dataGrid.setBusinessAddress(x);
+            dataLists.add(dataGrid);
+            System.out.println();
+        });
+    }
+
+    private static void print(String msg, Object... args) {
+        System.out.println(String.format(msg, args));
+    }
 }
